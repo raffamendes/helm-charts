@@ -3,6 +3,16 @@ entries:
   quarkus-app:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-08-24T20:48:45.619047796Z"
+    description: A Helm chart for Kubernetes
+    digest: fc29a9a27658d87cbb22d4876febc6c99345bd784512a5d8bb6b48f57cff5986
+    name: quarkus-app
+    type: application
+    urls:
+    - https://github.com/raffamendes/helm-charts/releases/download/quarkus-app-0.6.0/quarkus-app-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-08-24T20:26:15.695710393Z"
     description: A Helm chart for Kubernetes
     digest: f441b8f4cbe8b9c474ea4af8a5d29d405227bb441e3e27bffd6a8552fb0ec01c
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/raffamendes/helm-charts.git/quarkus-app-0.3.0.tgz
     version: 0.3.0
-generated: "2023-08-24T20:26:15.695717193Z"
+generated: "2023-08-24T20:48:45.619058597Z"
