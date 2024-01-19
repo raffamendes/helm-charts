@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    description: Route for application's http service.
+    haproxy.router.openshift.io/timeout: {{ .Values.proxy_timeout }}s
+    openshift.io/host.generated: "true"
+  labels:
+    app: {{ .Values.name }}
+  name: {{ .Values.name }}
+spec:
+  host: {{ .Values.hostname_http }}
+  path: /
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: "{{ .Values.name  }}-service"
+    weight: 100
+  wildcardPolicy: None
+
