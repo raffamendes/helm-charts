@@ -1,9 +1,9 @@
 replicaCount: 1
-name: cryostat-test-git
+name: quarkus-cryostat-test
 namespace: quarkus-app
 image:
-  name: image-registry.openshift-image-registry.svc:5000/quarkus-app/cryostat-test-git
-  tag: 2f57e6070d05b64217059482be94d70381ed6e11
+  name: image-registry.openshift-image-registry.svc:5000/quarkus-app/quarkus-cryostat-test
+  tag: 0.1-alfa
 service:
   type: ClusterIP
   port: 8080
