@@ -51,4 +51,15 @@ entries:
     urls:
     - https://github.com/raffamendes/helm-charts.git/quarkus-app-0.3.0.tgz
     version: 0.3.0
-generated: "2023-08-24T21:07:11.028298857Z"
+  quarkus-redis:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-01-19T01:29:19.42419629Z"
+    description: A Helm chart for Kubernetes
+    digest: 2057b9121e00e874fdc93823eb89b1cf5d1bd3e307959913eade3fbc1d3ecc53
+    name: quarkus-redis
+    type: application
+    urls:
+    - https://github.com/raffamendes/helm-charts/releases/download/quarkus-redis-0.1.0/quarkus-redis-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-01-19T01:29:19.42421761Z"
