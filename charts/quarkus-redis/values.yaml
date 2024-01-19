@@ -3,7 +3,7 @@ name: quarkus-redis-app
 namespace: quarkus-redis
 image:
   name: quay.io/rcmendes/quarkus-redis
-  tag: 0.1-alfa
+  tag: 99eee9d2dde0ffd5118df8bb6b3d92e3868f9e70
 service:
   type: ClusterIP
   port: 8080
