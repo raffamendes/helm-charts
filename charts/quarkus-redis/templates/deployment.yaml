@@ -42,6 +42,12 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           imagePullPolicy: Always
+          env:
+            - name: USERNAME_FROM_AZURE
+              valueFrom:
+                secretKeyRef:
+                  key: username
+                  name: example-secret
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
