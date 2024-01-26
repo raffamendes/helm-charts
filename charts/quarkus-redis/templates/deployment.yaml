@@ -43,11 +43,16 @@ spec:
           terminationMessagePolicy: File
           imagePullPolicy: Always
           env:
-            - name: USERNAME_FROM_AZURE
+            - name: HOST
               valueFrom:
                 secretKeyRef:
-                  key: username
-                  name: example-secret
+                  key: HOST
+                  name: redis-configs
+            - name: PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: PASSWORD
+                  name: redis-configs
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
