@@ -11,7 +11,7 @@ spec:
       targetPort: 8080
       protocol: TCP
       name: http
-    - name: jmx
+    - name: jrf-jmx
       port: 10250
       targetPort: 10250
       protocol: TCP
