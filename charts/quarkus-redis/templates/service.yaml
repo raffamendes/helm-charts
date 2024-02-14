@@ -11,5 +11,9 @@ spec:
       targetPort: 8080
       protocol: TCP
       name: http
+    - name: jmx
+      port: 10250
+      targetPort: 10250
+      protocol: TCP
   selector:
    app: "{{ .Values.name  }}"
