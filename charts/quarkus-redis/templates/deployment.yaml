@@ -38,6 +38,7 @@ spec:
               protocol: TCP
             - containerPort: 8443
               protocol: TCP
+            - containerPort: 10250
           resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
@@ -53,6 +54,8 @@ spec:
                 secretKeyRef:
                   key: PASSWORD
                   name: redis-configs
+            - name: JAVA_OPTS_APPEND
+              value: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=10250 -Dcom.sun.management.jmxremote.rmi.port=10250 -Djava.rmi.server.hostname=127.0.0.1 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false"
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
