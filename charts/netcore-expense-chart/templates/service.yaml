@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "expense-netcore-api.fullname" . }}
-  labels:
-    {{- include "expense-netcore-api.labels" . | nindent 4 }}
+  name: "{{ .Values.name }}-service"
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +10,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "expense-netcore-api.selectorLabels" . | nindent 4 }}
+    app: "{{ .Values.name }}"
+
