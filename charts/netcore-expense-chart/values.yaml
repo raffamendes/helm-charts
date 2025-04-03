@@ -1,0 +1,16 @@
+replicaCount: 1
+image:
+  repository: teste
+  pullPolicy: IfNotPresent
+  tag: ""
+service:
+  type: ClusterIP
+  port: 8080
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: http
+readinessProbe:
+  httpGet:
+    path: /healthz
+    port: http
