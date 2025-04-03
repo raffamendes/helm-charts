@@ -5,10 +5,10 @@ metadata:
   labels:
     app: {{ .Values.name  }}
 spec:
- replicas: {{ .Values.replicaCount }}
- selector:
-  matchLabels:
-    app: {{ .Values.name }}
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
