@@ -1,9 +1,9 @@
 name: expense-api
 replicaCount: 1
 image:
-  repository: teste
+  repository: image-registry.openshift-image-registry.svc:5000/expense-api/expense-netcore
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "test"
 service:
   type: ClusterIP
   port: 8080
