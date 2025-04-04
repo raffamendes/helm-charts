@@ -1,5 +1,7 @@
 name: expense-api
 replicaCount: 1
+configmap:
+  name: redis-config
 image:
   repository: image-registry.openshift-image-registry.svc:5000/expense-api/expense-netcore
   pullPolicy: IfNotPresent
