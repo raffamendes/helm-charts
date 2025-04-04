@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: image-registry.openshift-image-registry.svc:5000/expense-api/expense-netcore
   pullPolicy: IfNotPresent
-  tag: "4f995bae3c60f066ea5daa19afddb19267fd226f"
+  tag: "0ca4db78e1b011e092ca496a873c1c6c2b88df34"
 service:
   type: ClusterIP
   port: 8080
