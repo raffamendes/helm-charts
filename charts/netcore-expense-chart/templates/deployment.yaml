@@ -36,6 +36,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          {{- with .Values.configmap }}
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.configmap.name }}
+          {{- end }}
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
