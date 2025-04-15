@@ -1,0 +1,19 @@
+name: expense-api
+replicaCount: 3
+configmap:
+  name: redis-config
+image:
+  repository: image-registry.openshift-image-registry.svc:5000/expense-api/expense-netcore
+  pullPolicy: IfNotPresent
+  tag: "0ca4db78e1b011e092ca496a873c1c6c2b88df34"
+service:
+  type: ClusterIP
+  port: 8080
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: http
+readinessProbe:
+  httpGet:
+    path: /healthz
+    port: http
