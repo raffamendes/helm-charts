@@ -5,7 +5,7 @@ configmap:
 image:
   repository: image-registry.openshift-image-registry.svc:5000/expense-api/expense-netcore
   pullPolicy: IfNotPresent
-  tag: "0ca4db78e1b011e092ca496a873c1c6c2b88df34"
+  tag: "teste-acs"
 service:
   type: ClusterIP
   port: 8080
