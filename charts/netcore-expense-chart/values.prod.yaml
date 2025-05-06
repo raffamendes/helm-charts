@@ -1,5 +1,5 @@
 name: expense-api
-replicaCount: 3
+replicaCount: 1
 configmap:
   name: redis-config
 image:
